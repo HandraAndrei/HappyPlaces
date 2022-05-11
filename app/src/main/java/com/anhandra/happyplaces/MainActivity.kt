@@ -6,11 +6,12 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.View
+import android.widget.ImageView
 import com.anhandra.happyplaces.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,12 +21,13 @@ class MainActivity : AppCompatActivity() {
         binding.splashScreen.setImageResource(R.drawable.mountain_view)
 
         supportActionBar?.hide()
-        Handler(Looper.getMainLooper()).postDelayed({ startBaseActivity() },3000)
+        Handler(Looper.getMainLooper()).postDelayed({ startBaseActivity() }, 3000)
 
 
     }
-    private fun startBaseActivity(){
-        val intent = Intent(this,BaseActivity::class.java)
+
+    private fun startBaseActivity() {
+        val intent = Intent(this, BaseActivity::class.java)
         startActivity(intent)
         finish()
     }

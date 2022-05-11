@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AddNewPlaceFragment">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/enter_place_name_edit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:hint="@string/enter_place_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/enter_place_name_text_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/select_date_button_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/select_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enter_place_name_edit" />
+
+        <TextView
+            android:id="@+id/selected_date_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/select_date_button_edit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enter_place_name_edit" />
+
+        <TextView
+            android:id="@+id/mood_tv_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mood"
+            app:layout_constraintBottom_toBottomOf="@+id/mood_slider_edit"
+            app:layout_constraintEnd_toStartOf="@+id/mood_slider_edit"
+            app:layout_constraintHorizontal_bias="0.521"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/selected_date_edit"
+            app:layout_constraintVertical_bias="0.735" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/mood_slider_edit"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:stepSize="1"
+            android:valueFrom="1"
+            android:valueTo="5"
+            app:labelBehavior="floating"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/select_date_button_edit" />
+
+        <TextView
+            android:id="@+id/activity_tv_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="64dp"
+            android:text="@string/activity_type"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mood_tv_edit" />
+
+        <Spinner
+            android:id="@+id/activity_spinner_edit"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/activity_tv_edit"
+            app:layout_constraintTop_toBottomOf="@+id/mood_slider_edit" />
+
+        <TextView
+            android:id="@+id/place_tv_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="48dp"
+            android:text="@string/place_type"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_tv_edit" />
+
+        <Spinner
+            android:id="@+id/place_spinner_edit"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/place_tv_edit"
+            app:layout_constraintTop_toBottomOf="@+id/activity_spinner_edit" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/enter_note_edit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="42dp"
+            android:layout_marginEnd="10dp"
+            android:hint="@string/add_a_note"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/place_spinner_edit">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/enter_note_text_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="7dp"
+                tools:layout_editor_absoluteY="373dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/enter_location_edit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="10dp"
+            android:hint="@string/enter_location"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enter_note_edit">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/enter_location_text_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="11dp"
+                tools:layout_editor_absoluteY="462dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/update_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:contentDescription="@string/save_place"
+            android:src="@drawable/ic_baseline_save_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
