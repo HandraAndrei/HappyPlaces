@@ -54,23 +54,25 @@ class AddNewPlaceFragment : Fragment(), AdapterView.OnItemSelectedListener {
         populatePlacePicker(binding.placeSpinner, context)
 
         binding.saveButton.setOnClickListener {
-            preparePlace(addNewPlaceViewModel)
-            addNewPlaceViewModel.insertPlace()
-            Toast.makeText(context, "Place added successfully", Toast.LENGTH_SHORT).show()
-            this.findNavController().navigate(R.id.listFragment)
+            if(preparePlace(addNewPlaceViewModel)) {
+                Toast.makeText(context, "Place added successfully", Toast.LENGTH_SHORT).show()
+                addNewPlaceViewModel.insertPlace()
+                this.findNavController().navigate(R.id.listFragment)
+            }
         }
 
 
         return binding.root
     }
 
-    fun preparePlace(viewModel: AddNewPlaceViewModel) {
+    fun preparePlace(viewModel: AddNewPlaceViewModel): Boolean {
         if (binding.enterPlaceNameText.text.toString()
                 .isEmpty() || binding.enterLocationText.text.toString()
                 .isEmpty() || binding.enterNoteText.text.toString().isEmpty()
             || binding.selectedDate.text.toString().isEmpty()
         ) {
             Toast.makeText(context, "Please enter all the fields", Toast.LENGTH_SHORT).show()
+            return false
         } else {
             val place = Place()
             place.placeName = binding.enterPlaceNameText.text.toString()
@@ -81,7 +83,9 @@ class AddNewPlaceFragment : Fragment(), AdapterView.OnItemSelectedListener {
             place.placeType = placeText
             place.location = binding.enterLocationText.text.toString()
             viewModel.place = place
+
         }
+        return true
     }
 
     private fun populatePlacePicker(spinner: Spinner, context: Context?) {
