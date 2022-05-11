@@ -1,10 +1,11 @@
-package com.anhandra.happyplaces
+package com.anhandra.happyplaces.editplace
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.anhandra.happyplaces.R
 
 
 class EditPlaceFragment : Fragment() {

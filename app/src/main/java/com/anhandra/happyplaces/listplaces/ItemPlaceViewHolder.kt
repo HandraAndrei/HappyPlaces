@@ -1,12 +1,11 @@
-package com.anhandra.happyplaces
+package com.anhandra.happyplaces.listplaces
 
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import org.w3c.dom.Text
+import com.anhandra.happyplaces.R
 
 class ItemPlaceViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 

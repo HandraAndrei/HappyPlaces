@@ -7,14 +7,14 @@
     <data>
         <variable
             name="listPlacesViewModel"
-            type="com.anhandra.happyplaces.ListPlacesViewModel" />
+            type="com.anhandra.happyplaces.listplaces.ListPlacesViewModel" />
         
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ListFragment">
+        tools:context=".listplaces.ListFragment">
 
 
         <androidx.recyclerview.widget.RecyclerView

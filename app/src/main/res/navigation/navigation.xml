@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.anhandra.happyplaces.ListFragment"
+        android:name="com.anhandra.happyplaces.listplaces.ListFragment"
         android:label="ListFragment" >
         <action
             android:id="@+id/action_listFragment_to_addNewPlaceFragment"
@@ -26,7 +26,7 @@
         android:label="ContactFragment" />
     <fragment
         android:id="@+id/addNewPlaceFragment"
-        android:name="com.anhandra.happyplaces.AddNewPlaceFragment"
+        android:name="com.anhandra.happyplaces.addnewplace.AddNewPlaceFragment"
         android:label="fragment_add_new_place"
         tools:layout="@layout/fragment_add_new_place" >
         <action
@@ -35,6 +35,6 @@
     </fragment>
     <fragment
         android:id="@+id/editPlaceFragment"
-        android:name="com.anhandra.happyplaces.EditPlaceFragment"
+        android:name="com.anhandra.happyplaces.editplace.EditPlaceFragment"
         android:label="EditPlaceFragment" />
 </navigation>

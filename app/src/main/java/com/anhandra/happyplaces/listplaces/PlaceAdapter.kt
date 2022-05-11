@@ -1,9 +1,11 @@
-package com.anhandra.happyplaces
+package com.anhandra.happyplaces.listplaces
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.anhandra.happyplaces.R
 import com.anhandra.happyplaces.database.Place
+import com.anhandra.happyplaces.listeners.PlaceClickListener
 
 class PlaceAdapter(val clickListener: PlaceClickListener) :
     RecyclerView.Adapter<ItemPlaceViewHolder>() {

@@ -1,4 +1,4 @@
-package com.anhandra.happyplaces
+package com.anhandra.happyplaces.addnewplace
 
 import android.app.DatePickerDialog
 import android.content.Context
@@ -8,10 +8,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import androidx.core.view.isEmpty
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.anhandra.happyplaces.R
 import com.anhandra.happyplaces.database.Place
 import com.anhandra.happyplaces.database.PlacesDatabase
 import com.anhandra.happyplaces.databinding.FragmentAddNewPlaceBinding

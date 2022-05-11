@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HappyPlaces">
         <activity
-            android:name=".DetailsActivity"
+            android:name=".placesdetail.DetailsActivity"
             android:exported="false" />
         <activity
             android:name=".BaseActivity"

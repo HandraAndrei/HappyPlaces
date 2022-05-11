@@ -1,4 +1,4 @@
-package com.anhandra.happyplaces
+package com.anhandra.happyplaces.listplaces
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

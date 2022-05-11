@@ -1,13 +1,11 @@
-package com.anhandra.happyplaces
+package com.anhandra.happyplaces.placesdetail
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
-import com.anhandra.happyplaces.database.PLACE_ID_EXTRA
+import com.anhandra.happyplaces.R
 import com.anhandra.happyplaces.database.PlacesDatabase
 import com.anhandra.happyplaces.databinding.ActivityDetailsBinding
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 
 class DetailsActivity : AppCompatActivity() {
 

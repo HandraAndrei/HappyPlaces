@@ -1,4 +1,4 @@
-package com.anhandra.happyplaces
+package com.anhandra.happyplaces.listeners
 
 import com.anhandra.happyplaces.database.Place
 
